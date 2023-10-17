@@ -1,0 +1,6 @@
+echo "nameserver 192.168.122.1" > /etc/resolv.conf
+
+apt-get update
+DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends nginx apache2 php php-fpm git
+
+service apache2 start
